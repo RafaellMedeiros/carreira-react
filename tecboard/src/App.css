@@ -1,0 +1,33 @@
+header {
+    background: #06151A;
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+}
+
+section {
+    background: linear-gradient(#17E4B9, #091D24);
+    display: flex;
+    justify-content: center;
+}
+
+section img {
+    max-width: 90%;
+}
+
+form {
+    background: #212121;
+    width: 384px;
+    max-width: 90%;
+    margin: 32px auto;
+    padding: 28px;
+    border-radius: 16px;
+    color: #FFFFFF;
+}
+
+form fieldset {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+}
