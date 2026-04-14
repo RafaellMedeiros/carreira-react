@@ -1,11 +1,14 @@
+import "./App.css";
 
-import './App.css'
+function TituloFormulario({ children }) {
+  return <h2>{children}</h2>;
+}
 
 function FormularioDeEvento() {
   return (
     <form action="/">
-      <h2>Preencha para criar um evento:</h2>
-      <br/>
+      <TituloFormulario>Preencha para criar um evento:</TituloFormulario>
+      <br />
       <fieldset>
         <label htmlFor="name">Qual o nome do evento?</label>
         <input type="text" id="name" name="name" />
@@ -14,14 +17,12 @@ function FormularioDeEvento() {
         <label htmlFor="tema">Tema do evento</label>
         <input type="text" id="tema" name="tema" />
 
-        <br/>
+        <br />
         <input type="submit" value="Criar Evento" />
       </fieldset>
-
     </form>
-  )
+  );
 }
-
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
         <FormularioDeEvento />
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
