@@ -4,13 +4,18 @@ function TituloFormulario({ children }) {
   return <h2>{children}</h2>;
 }
 
+function Label(props) {
+  const { children } = props;
+  return <label {...props}>{children}</label>;
+}
+
 function FormularioDeEvento() {
   return (
     <form action="/">
       <TituloFormulario>Preencha para criar um evento:</TituloFormulario>
       <br />
       <fieldset>
-        <label htmlFor="name">Qual o nome do evento?</label>
+        <Label htmlFor="name">Qual o nome do evento?</Label>
         <input type="text" id="name" name="name" />
         <label htmlFor="date">Data do evento</label>
         <input type="date" id="date" name="date" />
