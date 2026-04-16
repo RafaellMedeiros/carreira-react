@@ -1,4 +1,10 @@
+import "./styles.css";
+
 export function Label(props) {
   const { children } = props;
-  return <label {...props}>{children}</label>;
+  return (
+    <label className="campo-label" {...props}>
+      {children}
+    </label>
+  );
 }

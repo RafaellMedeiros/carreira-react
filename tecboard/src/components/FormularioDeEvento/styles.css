@@ -1,0 +1,23 @@
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo-input {
+  background-color: transparent;
+  border: 1px solid #4a4949;
+  border-radius: 4px;
+  padding: 8px;
+  color: #fff;
+}
+
+.campo-input:focus {
+  outline: none;
+  border-color: #4a4949;
+  box-shadow: 0 0 0 2px rgba(74, 73, 73, 0.2);
+}
+
+.campo-input::placeholder {
+  color: #4a4949;
+}
