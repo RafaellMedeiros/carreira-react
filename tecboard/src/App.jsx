@@ -1,33 +1,5 @@
 import "./App.css";
-
-function TituloFormulario({ children }) {
-  return <h2>{children}</h2>;
-}
-
-function Label(props) {
-  const { children } = props;
-  return <label {...props}>{children}</label>;
-}
-
-function FormularioDeEvento() {
-  return (
-    <form action="/">
-      <TituloFormulario>Preencha para criar um evento:</TituloFormulario>
-      <br />
-      <fieldset>
-        <Label htmlFor="name">Qual o nome do evento?</Label>
-        <input type="text" id="name" name="name" />
-        <label htmlFor="date">Data do evento</label>
-        <input type="date" id="date" name="date" />
-        <label htmlFor="tema">Tema do evento</label>
-        <input type="text" id="tema" name="tema" />
-
-        <br />
-        <input type="submit" value="Criar Evento" />
-      </fieldset>
-    </form>
-  );
-}
+import { FormularioDeEvento } from "./components/FormularioDeEvento";
 
 function App() {
   return (
