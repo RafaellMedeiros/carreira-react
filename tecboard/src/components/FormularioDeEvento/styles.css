@@ -4,7 +4,7 @@ fieldset {
   gap: 16px;
 }
 
-.campo-input {
+.campo-input, .campo-select {
   background-color: transparent;
   border: 1px solid #4a4949;
   border-radius: 4px;
@@ -12,12 +12,26 @@ fieldset {
   color: #fff;
 }
 
-.campo-input:focus {
+.opcoes {
+  background: #4a4949;
+}
+
+.campo-input:focus, .campo-select:focus {
   outline: none;
   border-color: #4a4949;
   box-shadow: 0 0 0 2px rgba(74, 73, 73, 0.2);
 }
 
-.campo-input::placeholder {
+.campo-input::placeholder, .campo-select::placeholder{
   color: #4a4949;
+}
+
+.campo-botao {
+  background: #17D9B1;
+  padding: 16px;
+  border-radius: 8px;
+  width: 128px;
+  font-weight: bold;
+  color: #212121;
+  margin: auto;
 }
