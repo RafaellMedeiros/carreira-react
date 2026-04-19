@@ -2,8 +2,5 @@
     background: linear-gradient(#17E4B9, #091D24);
     display: flex;
     justify-content: center;
-}
-
-.banner img {
-    max-width: 90%;
+    width: 100%;
 }

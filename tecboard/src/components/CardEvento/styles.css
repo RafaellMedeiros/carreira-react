@@ -1,0 +1,58 @@
+.card-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #212121;
+    width: 282px;
+    padding: 24px 16px;
+    color: #FFFFFF;
+    gap: 8px;
+    height: 240px;
+}
+
+.conteudo img {
+    width: 282px;
+    margin: 0;
+}
+
+.conteudo p,
+.conteudo h4 {
+    margin: 0;
+}
+
+.tema {
+    font-family: 'Orbitron', sans-serif;
+    padding: 8px;
+    background-color: #4A4949;
+    text-transform: uppercase;
+    line-height: 120%;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
+.data {
+    line-height: 120%;
+    font-size: 13px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.titulo {
+    line-height: 125%;
+    font-size: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+
+.descricao {
+    line-height: 120%;
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+}
