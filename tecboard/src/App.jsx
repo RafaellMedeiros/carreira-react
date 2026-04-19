@@ -1,5 +1,6 @@
 import "./App.css";
 import { FormularioDeEvento } from "./components/FormularioDeEvento";
+import { Banner } from "./components/Banner";
 import { Tema } from "./components/Tema";
 
 function App() {
@@ -30,17 +31,13 @@ function App() {
     },
   ]
 
-
-
   return (
     <>
       <main>
         <header>
           <img src="/logo.png" alt="TecBoard Logo" />
         </header>
-        <section>
-          <img src="/banner.png" alt="TecBoard Banner" />
-        </section>
+        <Banner></Banner>
         <FormularioDeEvento />
       </main>
       {temas.map(tema => (

@@ -5,16 +5,6 @@ header {
     padding: 32px;
 }
 
-section {
-    background: linear-gradient(#17E4B9, #091D24);
-    display: flex;
-    justify-content: center;
-}
-
-section img {
-    max-width: 90%;
-}
-
 form {
     background: #212121;
     width: 384px;
