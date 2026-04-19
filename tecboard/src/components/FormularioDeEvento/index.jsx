@@ -19,7 +19,6 @@ export function FormularioDeEvento() {
         <Label htmlFor="date">Data do evento</Label>
         <input className="campo-input" type="date" id="date" name="date" />
         <Label htmlFor="tema">Tema do evento</Label>
-        {/* <input className="campo-input" type="text" id="tema" name="tema" /> */}
         <select className="campo-select" id="tema" name="tema">
           <option className="opcoes" value="">Selecione um tema</option>
           <option className="opcoes" value="tecnologia">Tecnologia</option>
