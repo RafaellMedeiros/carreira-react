@@ -88,7 +88,9 @@ function App() {
           </Footer>
         </ChecklistsWrapper>
       </Container>
-      <Dialog isOpen={isDialogOpen} />
+      <Dialog isOpen={isDialogOpen} onClose={toggleDialog}>
+        <p>This is the dialog content.</p>
+      </Dialog>
     </main>
   )
 }

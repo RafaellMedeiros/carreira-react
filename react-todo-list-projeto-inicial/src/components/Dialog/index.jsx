@@ -1,8 +1,16 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import './dialog.styles.css'
 
-export function Dialog() {
+export function Dialog({ isOpen, onClose, children }) {
     const dialogRef = useRef(null)
+
+    useEffect(() => {
+        if (isOpen) {
+            openDialog()
+        } else {
+            closeDialog()
+        }
+    }, [isOpen])
 
     const openDialog = () => {
         if (dialogRef.current) {
@@ -18,10 +26,15 @@ export function Dialog() {
 
     return (
         <>
-            <button onClick={openDialog}>Show the dialog</button>
             <dialog ref={dialogRef}>
-                <p>This is the dialog content.</p>
-                <button onClick={closeDialog}>Close</button>
+                <div className="btn-close-wrapper">
+                    <button className="btn-close" onClick={onClose}>
+                        <IconClose />
+                    </button>
+                </div>
+                <div className="dialog-body">
+                    {children}
+                </div>
             </dialog>
         </>
     )
