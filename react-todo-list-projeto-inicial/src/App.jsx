@@ -10,54 +10,48 @@ import { IconPlus, IconSchool } from "./components/icons"
 import { SubHeading } from "./components/SubHeading"
 import { ToDoItem } from "./components/ToDoItem"
 import { ToDoList } from "./components/ToDoList"
-
-const todos = [
-  {
-    id: 1,
-    description: "JSX e componentes",
-    completed: false,
-    createdAt: "2022-10-31"
-  },
-  {
-    id: 2,
-    description: "Props, state e hooks",
-    completed: false,
-    createdAt: "2022-10-31"
-  },
-  {
-    id: 3,
-    description: "Ciclo de vida dos componentes",
-    completed: false,
-    createdAt: "2022-10-31"
-  },
-  {
-    id: 4,
-    description: "Testes unitários com Jest",
-    completed: false,
-    createdAt: "2022-10-31"
-  }
-]
-const completed = [
-  {
-    id: 5,
-    description: "Controle de inputs e formulários controlados",
-    completed: true,
-    createdAt: "2022-10-31"
-  },
-  {
-    id: 6,
-    description: "Rotas dinâmicas",
-    completed: true,
-    createdAt: "2022-10-31"
-  }
-]
+import { TextInput } from "./components/TextInput"
+import { TodoFrom } from "./components/TodoForn"
 
 function App() {
+
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      description: "JSX e componentes",
+      completed: false,
+      createdAt: "2022-10-31"
+    },
+    {
+      id: 2,
+      description: "Rotas dinâmicas",
+      completed: true,
+      createdAt: "2022-10-31"
+    }
+  ])
 
   const [isDialogOpen, setIsDialogOpen] = useState(false)
 
   const toggleDialog = () => {
     setIsDialogOpen(!isDialogOpen)
+  }
+
+  const addTodo = (formData) => {
+
+
+    setTodos(prevState => {
+      const newTodo = {
+        id: prevState.length + 1,
+        description: formData.get('description'),
+        completed: false,
+        createdAt: new Date().toISOString()
+      }
+      return [...prevState, newTodo]
+      
+    })
+
+
+    toggleDialog()
   }
 
   return (
@@ -71,13 +65,13 @@ function App() {
         <ChecklistsWrapper>
           <SubHeading>Para estudar</SubHeading>
           <ToDoList>
-            {todos.map(function (t) {
+            {todos.filter((t) => !t.completed).map(function (t) {
               return <ToDoItem key={t.id} item={t} />
             })}
           </ToDoList>
           <SubHeading>Concluído</SubHeading>
           <ToDoList>
-            {completed.map(function (t) {
+            {todos.filter((t) => t.completed).map(function (t) {
               return <ToDoItem key={t.id} item={t} />
             })}
           </ToDoList>
@@ -89,7 +83,7 @@ function App() {
         </ChecklistsWrapper>
       </Container>
       <Dialog isOpen={isDialogOpen} onClose={toggleDialog}>
-        <p>This is the dialog content.</p>
+        <TodoFrom onSubmit={addTodo} />
       </Dialog>
     </main>
   )

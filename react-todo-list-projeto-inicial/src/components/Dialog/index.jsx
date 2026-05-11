@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { IconClose } from "../icons/index"
 import './dialog.styles.css'
 
 export function Dialog({ isOpen, onClose, children }) {
@@ -32,7 +33,7 @@ export function Dialog({ isOpen, onClose, children }) {
                         <IconClose />
                     </button>
                 </div>
-                <div className="dialog-body">
+                <div className="body">
                     {children}
                 </div>
             </dialog>
