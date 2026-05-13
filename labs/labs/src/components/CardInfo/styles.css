@@ -5,6 +5,21 @@
   max-width: 300px;
 }
 
+.card-info:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #efefef;
+}
+
+.selected {
+  border-color: #007bff;
+  background-color: #e7f1ff;
+}
+
+.selected:hover {
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+  background-color: #d0e7ff;
+}
+
 .card-info-header {
   display: flex;
   justify-content: end;
