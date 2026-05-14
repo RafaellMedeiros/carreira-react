@@ -1,18 +1,23 @@
+import { use } from "react";
 import { CardInfo } from "../CardInfo";
 import './styles.css'
+import CardContext from "../CardsProvider/CardContext";
+import { AcademicCapIcon, BuildingLibrary, BuildingOffice } from "../Icons";
 
-export function Main({ cardInfos, onCardClick }) {
+export function Main() {
+  const {cards, handleCardClick} = use(CardContext)
+
   return (
     <main>
-      {cardInfos.map((info, index) => (
+      {cards.map((info, index) => (
         <CardInfo 
           key={index} 
           title={info.title} 
           description={info.description} 
           selected={info.selected}
-          onClick={() => onCardClick(index)}
+          onClick={() => handleCardClick(index)}
         >
-          {info.icon}
+          <AcademicCapIcon />
         </CardInfo>
       ))}
     </main>
