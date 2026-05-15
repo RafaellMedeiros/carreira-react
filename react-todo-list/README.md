@@ -1,8 +1,5 @@
 ![](thumbnail.png)
 
-# Figma
-https://www.figma.com/design/ZyUnE1K6qufO1iJnPNyN2o/JavaScript-para-React-%7C-Checklist-de-estudos--Community-?node-id=0-1&p=f&t=wEhNAYTXxv6dex1S-0
-
 # App de Checklist de Estudos
 
 Um projeto prático desenvolvido passo a passo para quem já tem o básico de ReactJS e quer evoluir para construir aplicações mais organizadas, escaláveis e com experiência moderna. Ao longo do curso, criamos um app de checklist para organizar estudos, tarefas e o que mais precisar.
