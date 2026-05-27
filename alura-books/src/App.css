@@ -1,0 +1,16 @@
+.App {
+    margin: 5% 10%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
