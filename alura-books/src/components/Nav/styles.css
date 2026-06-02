@@ -4,13 +4,6 @@ nav {
   gap: 3rem;
 }
 
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
 li {
   list-style: none;
   color: #fff;
