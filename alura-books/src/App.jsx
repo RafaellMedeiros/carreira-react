@@ -1,5 +1,3 @@
-import Header from './components/Header'
-
 import styled from 'styled-components'
 import Search from './components/Search'
 
@@ -14,7 +12,6 @@ function App() {
 
   return (
     <AppContainer>
-      <Header />
       <Search />
     </AppContainer>
   )

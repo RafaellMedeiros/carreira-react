@@ -4,6 +4,7 @@ import perfil from "../../assets/perfil.svg";
 import sacola from "../../assets/sacola.svg";
 
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Icones = styled.ul`
   display: flex;
@@ -13,9 +14,9 @@ const Icones = styled.ul`
 `;
 
 const menuItems = [
-  { name: "Home", link: "#home" },
-  { name: "Books", link: "#books" },
-  { name: "About", link: "#about" },
+  { name: "Home", link: "/" },
+  { name: "Books", link: "/books" },
+  { name: "About", link: "/about" },
 ];
 
 const menuIcons = [
@@ -29,7 +30,7 @@ export default function Nav() {
       <Icones>
         {menuItems.map((item) => (
           <li key={item.name}>
-            <a href={item.link}>{item.name}</a>
+            <Link to={item.link}>{item.name}</Link>
           </li>
         ))}
       </Icones>
