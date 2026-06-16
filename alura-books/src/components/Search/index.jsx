@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Input from "../Input";
-import booksDB from "./books.js";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Book from "../Book/index.jsx";
+import {getLivros} from '../../service/livros.js'
 
 
 const SearchContext = styled.section`
@@ -40,11 +40,23 @@ const BooksSection = styled.section`
 
 export default function Search() {
   const [books, setBooks] = useState([]);
+  const [booksAPI, setBooksAPI] = useState([])
+  
+  useEffect(() => {
+    const fetchBooks = async () => {
+      const response = await getLivros()
+      console.log(response);
+      
+      setBooksAPI(response)
+    }
+    fetchBooks()
+  }, [])
+
 
   const handleSearch = (e) => {
     const value = e.target.value;
     if (value.length > 3) {
-      const filteredBooks = booksDB.filter(book => {
+      const filteredBooks = booksAPI.filter(book => {
         console.log(book);
         return book.nome.toLowerCase().includes(value.toLowerCase());
       });
